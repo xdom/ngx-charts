@@ -12,6 +12,7 @@ export declare class LineChartComponent extends BaseChartComponent {
     xAxisLabel: any;
     yAxisLabel: any;
     autoScale: any;
+    autoZoom: any;
     timeline: any;
     gradient: boolean;
     showGridLines: boolean;
@@ -62,12 +63,13 @@ export declare class LineChartComponent extends BaseChartComponent {
     timelineXScale: any;
     timelineYScale: any;
     timelineXDomain: any;
+    timelineYDomain: any;
     timelineTransform: any;
     timelinePadding: number;
     update(): void;
     updateTimeline(): void;
     getXDomain(): any[];
-    getYDomain(): any[];
+    getYDomain(zoom?: boolean): any[];
     getSeriesDomain(): any[];
     getXScale(domain: any, width: any): any;
     getYScale(domain: any, height: any): any;
@@ -94,4 +96,5 @@ export declare class LineChartComponent extends BaseChartComponent {
     onActivate(item: any): void;
     onDeactivate(item: any): void;
     deactivateAll(): void;
+    private isInXDomain(name);
 }
